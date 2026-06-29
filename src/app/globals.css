@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1b365d;
+  --secondary: #2c5282;
+  --accent: #c8922a;
+  --surface: #f7f8fa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-slate-900 antialiased;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-amber-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md border border-primary bg-white px-5 py-2.5 text-sm font-semibold text-primary transition hover:bg-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
+  }
+
+  .section-heading {
+    @apply font-display text-2xl font-bold tracking-tight text-primary sm:text-3xl;
+  }
+
+  .hero-grid-bg {
+    background-image:
+      linear-gradient(rgba(27, 54, 93, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(27, 54, 93, 0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
